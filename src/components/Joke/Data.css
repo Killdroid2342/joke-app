@@ -1,0 +1,24 @@
+.out-input {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid black;
+  width: 300px;
+  margin-left: 50%;
+  margin-top: 0%;
+}
+.Text {
+  font-size: 20px;
+  list-style-type: none;
+}
+
+/* BUTTON Style */
+.outside-btn,
+.btn {
+  /* border: 1px solid red; */
+  height: 30px;
+  width: 120px;
+  padding-top: 20px;
+  padding-bottom: 40px;
+  font-family: sans-serif;
+  margin-left: 20%;
+}
