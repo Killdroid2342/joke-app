@@ -1,24 +1,31 @@
 .out-input {
   display: flex;
-  flex-direction: column;
-  border: 1px solid black;
+  flex-direction: row;
+  border: 1px solid white;
   width: 300px;
-  margin-left: 50%;
-  margin-top: 0%;
+  margin-left: 19%;
+  /* margin-top: 0%; */
 }
 .Text {
   font-size: 20px;
   list-style-type: none;
+  border: 1px solid green;
+  width: 200px;
 }
 
 /* BUTTON Style */
-.outside-btn,
+
 .btn {
-  /* border: 1px solid red; */
+  border: 1px solid red;
   height: 30px;
   width: 120px;
   padding-top: 20px;
   padding-bottom: 40px;
   font-family: sans-serif;
-  margin-left: 20%;
+  cursor: pointer;
+  /* margin-top: 50px; */
+  margin-left: 70px;
+  background-color: white;
+  font-weight: bold;
+  color: black;
 }

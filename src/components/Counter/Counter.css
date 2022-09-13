@@ -1,0 +1,19 @@
+.title {
+  border: 1px solid green;
+  font-size: 40px;
+}
+.counter {
+  border: 1px solid blue;
+  height: 400px;
+  text-align: center;
+  width: 400px;
+  margin-left: 30%;
+}
+.number {
+  border: 1px solid red;
+  height: 40px;
+  width: 200px;
+  /* align-items: center; */
+  margin-left: 25%;
+  text-align: center;
+}
