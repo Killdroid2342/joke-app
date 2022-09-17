@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, Fragment } from 'react';
 import './Data.css';
 
 const Joke = ({ genre }) => {
@@ -24,32 +24,49 @@ const Joke = ({ genre }) => {
     API();
   };
 
+  // counter
+
+  const [count, setCount] = useState(0);
+
   return (
-    <div className='out-input'>
-      <div className='main-joke'>
-        <ul>
-          {jokes.map((data) => {
-            return (
-              <div key={data.id}>
-                {data.type === 'single' ? (
-                  <li className='Text'>{data.joke}</li>
-                ) : (
-                  <div>
-                    <li className='Text'>{data.setup}</li>
-                    <li className='Text'>{data.delivery}</li>
-                  </div>
-                )}
-              </div>
-            );
-          })}
-        </ul>
-        <div className='outside-btn'>
-          <button className='btn' onClick={call}>
-            Click For New Joke
-          </button>
+    <Fragment>
+      <div className='out-input'>
+        <div className='main-joke'>
+          <ul>
+            {jokes.map((data) => {
+              return (
+                <div key={data.id}>
+                  {data.type === 'single' ? (
+                    <li className='Text'>{data.joke}</li>
+                  ) : (
+                    <div>
+                      <li className='Text'>{data.setup}</li>
+                      <li className='Text'>{data.delivery}</li>
+                    </div>
+                  )}
+                </div>
+              );
+            })}
+          </ul>
+          <div className='outside-btn'>
+            <button
+              className='btn'
+              onClick={() => {
+                setCount(count + 1);
+                // console.log(count);
+                call();
+              }}
+            >
+              Click For New Joke
+            </button>
+          </div>
         </div>
       </div>
-    </div>
+      <div className='Count'>
+        <p className='head'>Counter</p>
+        <p className='Numb'>{count}</p>
+      </div>
+    </Fragment>
   );
 };
 
