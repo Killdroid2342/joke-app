@@ -1,10 +1,10 @@
 import React, { useState, Fragment } from 'react';
 import './Data.css';
+import useDynamicState from '../util/useLocalStorage';
 
 const Joke = ({ genre }) => {
   // let API_Dark = 'https://v2.jokeapi.dev/joke/Dark';
   // let Value = API_Dark;
-
   const [jokes, setJokes] = useState([]);
 
   const API = () => {
@@ -26,7 +26,7 @@ const Joke = ({ genre }) => {
 
   // counter
 
-  const [count, setCount] = useState(0);
+  const [count, setCount] = useDynamicState(0, 'count');
 
   return (
     <Fragment>
