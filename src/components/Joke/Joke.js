@@ -63,7 +63,7 @@ const Joke = ({ genre }) => {
         </div>
       </div>
       <div className='Count'>
-        <p className='head'>Counter</p>
+        <p className='head'>All The Jokes Rendered</p>
         <p className='Numb'>{count}</p>
       </div>
     </Fragment>
