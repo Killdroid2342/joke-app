@@ -59,3 +59,18 @@
   font-weight: bold;
   margin-top: 20px;
 }
+.outside-btn {
+  display: flex;
+  flex-direction: column;
+}
+.saveJoke {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  width: 200px;
+  margin-left: 15%;
+  margin-top: 20px;
+}
+.savedJokes {
+  border: 1px solid red;
+  height: 200px;
+}

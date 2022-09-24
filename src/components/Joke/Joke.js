@@ -15,7 +15,7 @@ const Joke = ({ genre }) => {
         return res.json();
       })
       .then((data) => {
-        // console.log(data);
+        console.log(data);
         setJokes([data]);
       });
   };
@@ -27,6 +27,8 @@ const Joke = ({ genre }) => {
   // counter
 
   const [count, setCount] = useDynamicState(0, 'count');
+
+  //saving jokes
 
   return (
     <Fragment>
@@ -59,12 +61,19 @@ const Joke = ({ genre }) => {
             >
               Click For New Joke
             </button>
+            <button className='saveJoke'>Save current Joke</button>
           </div>
         </div>
       </div>
       <div className='Count'>
         <p className='head'>All The Jokes Rendered</p>
         <p className='Numb'>{count}</p>
+      </div>
+      <div className='Count'>
+        <p className='head'> Saved Jokes</p>
+        <div className='savedJokes'>
+          <li className='Text'>lorem</li>
+        </div>
       </div>
     </Fragment>
   );
