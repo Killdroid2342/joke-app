@@ -32,7 +32,7 @@ const Joke = ({ genre }) => {
 
   const [count, setCount] = useDynamicState(0, 'count');
 
-  //saving jokes
+  //id
 
   return (
     <Fragment>
@@ -74,12 +74,12 @@ const Joke = ({ genre }) => {
         <p className='Numb'>{count}</p>
       </div>
       <div className='Count'>
-        <p className='head'> Saved Jokes</p>
-        <div className='savedJokes'>
+        <p className='head'>Saved Jokes</p>
+        <div className='savedJokes1'>
           {/* {console.log(savedJokes)} */}
-          {savedJokes?.map((savedJoke) => {
+          {savedJokes?.map((savedJoke, idx) => {
             return (
-              <div>
+              <div key={idx}>
                 {savedJoke.type === 'single' ? (
                   <li className='Text'>{savedJoke.joke}</li>
                 ) : (
