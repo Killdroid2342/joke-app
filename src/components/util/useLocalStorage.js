@@ -3,6 +3,7 @@ import { useEffect, useState } from 'react';
 const useDynamicState = (defaultValue, key) => {
   const [value, setNumber] = useState(() => {
     const dynamic = window.localStorage.getItem(key);
+    // console.log(dynamic, 123);
     return dynamic !== null ? JSON.parse(dynamic) : defaultValue;
   });
   useEffect(() => {
