@@ -1,4 +1,3 @@
-import './App.css';
 import Joke from './components/Joke/Joke';
 import Selector from './components/Selector/Selector';
 import React, { useState } from 'react';
@@ -11,7 +10,7 @@ function App() {
         Wanna Hear a joke?
       </h1>
       <Selector genre={genre} setGenre={setGenre} />
-      <div className='under-selector'>
+      <div className='border border-red-800 flex flex-row'>
         <Joke genre={genre} />
       </div>
     </React.Fragment>
