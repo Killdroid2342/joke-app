@@ -3,14 +3,11 @@ import './Data.css';
 import useDynamicState from '../util/useLocalStorage';
 
 const Joke = ({ genre }) => {
-  // let API_Dark = 'https://v2.jokeapi.dev/joke/Dark';
-  // let Value = API_Dark;
   const [joke, setJoke] = useState(null);
   const [savedJokes, setSavedJokes] = useDynamicState([], 'saved-jokes');
 
   const saveJoke = () => {
     setSavedJokes([...savedJokes, joke]);
-    // console.log(savedJokes);
   };
 
   const API = () => {
@@ -55,7 +52,6 @@ const Joke = ({ genre }) => {
               className='btn'
               onClick={() => {
                 setCount(count + 1);
-                // console.log(count);
                 call();
               }}
             >
@@ -74,7 +70,6 @@ const Joke = ({ genre }) => {
       <div className='Count'>
         <p className='head'>Saved Jokes</p>
         <div className='savedJokes1'>
-          {/* {console.log(savedJokes)} */}
           {savedJokes?.map((savedJoke, idx) => {
             return (
               <div key={idx}>
