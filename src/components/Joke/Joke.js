@@ -31,7 +31,7 @@ const Joke = ({ genre }) => {
 
   return (
     <Fragment>
-      <div className='out-input'>
+      <div className=' flex flex-row border border-white w-80'>
         <div className='main-joke'>
           <ul>
             {joke && (
