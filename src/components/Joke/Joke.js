@@ -32,8 +32,6 @@ const Joke = ({ genre }) => {
 
   const [count, setCount] = useDynamicState(0, 'count');
 
-  //id
-
   return (
     <Fragment>
       <div className='out-input'>
