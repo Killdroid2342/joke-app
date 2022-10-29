@@ -1,13 +1,4 @@
-.Text {
-  font-size: 20px;
-  list-style-type: none;
-  border: 1px solid green;
-  width: 200px;
-  margin-top: 20px;
-}
-
 /* BUTTON Style */
-
 .btn {
   border: 1px solid red;
   height: 30px;
@@ -16,9 +7,7 @@
   padding-bottom: 40px;
   font-family: sans-serif;
   cursor: pointer;
-  /* margin-top: 50px; */
   margin-left: 70px;
-  /* background-color: white; */
   font-weight: bold;
   color: black;
   margin-top: 50px;
@@ -30,7 +19,6 @@
   margin-left: 10%;
 }
 .head {
-  /* border: 1px solid white; */
   margin-left: 10%;
   font-size: 25px;
 }

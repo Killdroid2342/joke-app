@@ -32,16 +32,16 @@ const Joke = ({ genre }) => {
   return (
     <Fragment>
       <div className=' flex flex-row border border-white w-80'>
-        <div className='main-joke'>
+        <div>
           <ul>
             {joke && (
               <div>
                 {joke.type === 'single' ? (
-                  <li className='Text'>{joke.joke}</li>
+                  <li className='text'>{joke.joke}</li>
                 ) : (
                   <div>
-                    <li className='Text'>{joke.setup}</li>
-                    <li className='Text'>{joke.delivery}</li>
+                    <li className='text'>{joke.setup}</li>
+                    <li className='text'>{joke.delivery}</li>
                   </div>
                 )}
               </div>
@@ -57,7 +57,7 @@ const Joke = ({ genre }) => {
             >
               Click For New Joke
             </button>
-            <button className='saveJoke' onClick={saveJoke}>
+            <button className='saveJoke text-white' onClick={saveJoke}>
               Save current Joke
             </button>
           </div>
@@ -84,7 +84,7 @@ const Joke = ({ genre }) => {
               </div>
             );
           })}
-          <li className='Text'></li>
+          <li className='text'></li>
         </div>
       </div>
     </Fragment>

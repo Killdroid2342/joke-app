@@ -19,6 +19,9 @@ body {
   color: white;
 }
 @layer components {
+  .text {
+    @apply text-xl list-none w-48 mt-5;
+  }
 }
 @tailwind base;
 @tailwind components;
