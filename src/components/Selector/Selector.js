@@ -1,9 +1,8 @@
 import React from 'react';
-import './Selector.css';
 const Selector = ({ genre, setGenre }) => {
   return (
     <form>
-      <div className='outside-selector'>
+      <div className='flex flex-col items-center justify-center mt-5 mb-5'>
         <label>Dark: </label>
         <input
           type='radio'
