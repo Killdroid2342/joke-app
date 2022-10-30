@@ -1,5 +1,4 @@
 import React, { useState, Fragment } from 'react';
-import './Data.css';
 import useDynamicState from '../util/useLocalStorage';
 
 const Joke = ({ genre }) => {
@@ -66,10 +65,12 @@ const Joke = ({ genre }) => {
       </div>
       <div className='border border-blue-900 w-80 h-auto ml-[18%]'>
         <p className='text-2xl text-center'>All The Jokes Rendered</p>
-        <p className='Numb'>{count}</p>
+        <p className='border border-green-700 w-12 h-5 text-center pt-5 pb-10 ml-[43%]'>
+          {count}
+        </p>
       </div>
-      <div className='Count'>
-        <p className='head'>Saved Jokes</p>
+      <div className='border border-blue-900 w-80 h-auto ml-[18%]'>
+        <p className='text-2xl text-center mb-5'>Saved Jokes</p>
         <div className='border border-red-7000 h-52'>
           {savedJokes?.map((savedJoke, idx) => {
             return (
