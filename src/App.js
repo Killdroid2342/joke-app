@@ -10,7 +10,7 @@ function App() {
         Wanna Hear a joke?
       </h1>
       <Selector genre={genre} setGenre={setGenre} />
-      <div className='border border-red-800 flex flex-row'>
+      <div className='border border-red-800 flex flex-row justify-center'>
         <Joke genre={genre} />
       </div>
     </React.Fragment>

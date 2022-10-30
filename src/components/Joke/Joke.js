@@ -47,9 +47,9 @@ const Joke = ({ genre }) => {
               </div>
             )}
           </ul>
-          <div className='outside-btn'>
+          <div className='flex flex-col'>
             <button
-              className='btn'
+              className='btn border border-red-700 h-8 w-32 pt-5 pb-16 cursor-pointer font-bold text-white ml-16 mt-12'
               onClick={() => {
                 setCount(count + 1);
                 call();
@@ -57,7 +57,10 @@ const Joke = ({ genre }) => {
             >
               Click For New Joke
             </button>
-            <button className='saveJoke text-white' onClick={saveJoke}>
+            <button
+              className='pt-2 pb-2 w-48 ml-8 mt-5 text-white'
+              onClick={saveJoke}
+            >
               Save current Joke
             </button>
           </div>
@@ -69,7 +72,7 @@ const Joke = ({ genre }) => {
       </div>
       <div className='Count'>
         <p className='head'>Saved Jokes</p>
-        <div className='savedJokes1'>
+        <div className='border border-red-7000 h-52'>
           {savedJokes?.map((savedJoke, idx) => {
             return (
               <div key={idx}>

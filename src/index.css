@@ -20,7 +20,7 @@ body {
 }
 @layer components {
   .text {
-    @apply text-xl list-none w-48 mt-5;
+    @apply text-xl list-none w-48 mt-5 text-center;
   }
 }
 @tailwind base;

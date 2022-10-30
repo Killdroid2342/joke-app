@@ -1,17 +1,5 @@
 /* BUTTON Style */
-.btn {
-  border: 1px solid red;
-  height: 30px;
-  width: 120px;
-  padding-top: 20px;
-  padding-bottom: 40px;
-  font-family: sans-serif;
-  cursor: pointer;
-  margin-left: 70px;
-  font-weight: bold;
-  color: black;
-  margin-top: 50px;
-}
+
 .Count {
   border: 1px solid blue;
   width: 300px;
@@ -38,19 +26,4 @@
   margin-left: 30px;
   font-weight: bold;
   margin-top: 20px;
-}
-.outside-btn {
-  display: flex;
-  flex-direction: column;
-}
-.saveJoke {
-  padding-top: 10px;
-  padding-bottom: 10px;
-  width: 200px;
-  margin-left: 15%;
-  margin-top: 20px;
-}
-.savedJokes1 {
-  border: 1px solid red;
-  height: 200px;
 }
