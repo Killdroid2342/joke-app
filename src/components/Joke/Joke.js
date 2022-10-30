@@ -31,43 +31,41 @@ const Joke = ({ genre }) => {
 
   return (
     <Fragment>
-      <div className=' flex flex-row border border-white w-80'>
-        <div>
-          <ul>
-            {joke && (
-              <div>
-                {joke.type === 'single' ? (
-                  <li className='text'>{joke.joke}</li>
-                ) : (
-                  <div>
-                    <li className='text'>{joke.setup}</li>
-                    <li className='text'>{joke.delivery}</li>
-                  </div>
-                )}
-              </div>
-            )}
-          </ul>
-          <div className='flex flex-col'>
-            <button
-              className='btn border border-red-700 h-8 w-32 pt-5 pb-16 cursor-pointer font-bold text-white ml-16 mt-12'
-              onClick={() => {
-                setCount(count + 1);
-                call();
-              }}
-            >
-              Click For New Joke
-            </button>
-            <button
-              className='pt-2 pb-2 w-48 ml-8 mt-5 text-white'
-              onClick={saveJoke}
-            >
-              Save current Joke
-            </button>
-          </div>
+      <div className='border border-white'>
+        <ul>
+          {joke && (
+            <div>
+              {joke.type === 'single' ? (
+                <li className='text'>{joke.joke}</li>
+              ) : (
+                <div>
+                  <li className='text'>{joke.setup}</li>
+                  <li className='text'>{joke.delivery}</li>
+                </div>
+              )}
+            </div>
+          )}
+        </ul>
+        <div className='flex flex-col'>
+          <button
+            className='btn border border-red-700 h-8 w-32 pt-5 pb-16 cursor-pointer font-bold text-white ml-8 mt-12'
+            onClick={() => {
+              setCount(count + 1);
+              call();
+            }}
+          >
+            Click For New Joke
+          </button>
+          <button
+            className='pt-2 pb-2 w-48 ml-4 mt-5 text-white border-2 border-blue-900'
+            onClick={saveJoke}
+          >
+            Save current Joke
+          </button>
         </div>
       </div>
-      <div className='Count'>
-        <p className='head'>All The Jokes Rendered</p>
+      <div className='border border-blue-900 w-80 h-auto ml-[18%]'>
+        <p className='text-2xl text-center'>All The Jokes Rendered</p>
         <p className='Numb'>{count}</p>
       </div>
       <div className='Count'>
