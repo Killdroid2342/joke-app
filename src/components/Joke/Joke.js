@@ -71,16 +71,16 @@ const Joke = ({ genre }) => {
       </div>
       <div className='border border-blue-900 w-80 h-auto ml-[18%]'>
         <p className='text-2xl text-center mb-5'>Saved Jokes</p>
-        <div className='border border-red-7000 h-52'>
+        <div className='border border-red-700'>
           {savedJokes?.map((savedJoke, idx) => {
             return (
               <div key={idx}>
                 {savedJoke.type === 'single' ? (
-                  <li className='Text'>{savedJoke.joke}</li>
+                  <li className='text'>{savedJoke.joke}</li>
                 ) : (
                   <div>
-                    <li className='Text'>{savedJoke.setup}</li>
-                    <li className='Text'>{savedJoke.delivery}</li>
+                    <li className='text'>{savedJoke.setup}</li>
+                    <li className='text'>{savedJoke.delivery}</li>
                   </div>
                 )}
               </div>
