@@ -2,7 +2,7 @@ import React from 'react';
 const Selector = ({ genre, setGenre }) => {
   return (
     <form>
-      <div className='flex flex-col items-center justify-center mt-5 mb-5'>
+      <div>
         <label>Dark: </label>
         <input
           type='radio'
