@@ -3,10 +3,12 @@ import Selector from './components/Selector/Selector';
 import React, { useState } from 'react';
 function App() {
   const [genre, setGenre] = useState('Dark');
-
+  document.title = 'Joke Website';
   return (
     <React.Fragment>
-      <h1>Wanna Hear a joke?</h1>
+      <h1 className='text-center text-2xl font-bold text-white'>
+        Wanna Hear a joke?
+      </h1>
       <Selector genre={genre} setGenre={setGenre} />
       <div>
         <Joke genre={genre} />
