@@ -15,14 +15,9 @@ a {
   box-sizing: border-box;
 }
 body {
-  background-color: black;
-  color: white;
+  background-color: #0e0e0e;
 }
-@layer components {
-  .text {
-    @apply text-xl list-none w-48 mt-5 text-center;
-  }
-}
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
