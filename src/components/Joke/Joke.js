@@ -67,22 +67,20 @@ const Joke = ({ genre }) => {
       </div>
       <div>
         <p className='text-3xl mt-5 mb-5 font-bold'>Saved Jokes</p>
-        <div>
-          {savedJokes?.map((savedJoke, idx) => {
-            return (
-              <div key={idx}>
-                {savedJoke.type === 'single' ? (
-                  <li>{savedJoke.joke}</li>
-                ) : (
-                  <div className='border-2 border-white p-5 rounded-lg mb-5'>
-                    <li className='list-none'>{savedJoke.setup}</li>
-                    <li className='list-none'>{savedJoke.delivery}</li>
-                  </div>
-                )}
-              </div>
-            );
-          })}
-        </div>
+        {savedJokes?.map((savedJoke, idx) => {
+          return (
+            <div key={idx}>
+              {savedJoke.type === 'single' ? (
+                <li>{savedJoke.joke}</li>
+              ) : (
+                <div className='border-2 border-white p-5 rounded-lg mb-5'>
+                  <li className='list-none'>{savedJoke.setup}</li>
+                  <li className='list-none'>{savedJoke.delivery}</li>
+                </div>
+              )}
+            </div>
+          );
+        })}
       </div>
     </div>
   );
