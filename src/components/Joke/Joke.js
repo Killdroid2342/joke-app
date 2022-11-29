@@ -31,8 +31,8 @@ const Joke = ({ genre }) => {
   return (
     <div className='border-2 border-white rounded-md flex flex-col items-center justify-center text-center'>
       <div className=' border-2 border-white w-56 rounded-xl mt-5 p-5'>
-        <p className='mb-2 text-xl text-bold'>All The Jokes Rendered</p>
-        <p className='text-xl text-bold'>{count}</p>
+        <p className='mb-2 text-xl font-bold'>All The Jokes Rendered</p>
+        <p className='text-xl font-bold'>{count}</p>
       </div>
       <ul className='border-2 border-white w-56 rounded-xl mt-5'>
         {joke && (
@@ -54,13 +54,19 @@ const Joke = ({ genre }) => {
             setCount(count + 1);
             call();
           }}
+          className='border-2 border-white p-3 mt-5 rounded-xl'
         >
           Click For New Joke
         </button>
-        <button onClick={saveJoke}>Save current Joke</button>
+        <button
+          onClick={saveJoke}
+          className='border-2 border-white p-3 mt-5 rounded-xl'
+        >
+          Save current Joke
+        </button>
       </div>
       <div>
-        <p>Saved Jokes</p>
+        <p className='text-2xl mt-3 font-bold'>Saved Jokes</p>
         <div>
           {savedJokes?.map((savedJoke, idx) => {
             return (
