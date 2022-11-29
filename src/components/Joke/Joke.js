@@ -29,37 +29,35 @@ const Joke = ({ genre }) => {
   const [count, setCount] = useDynamicState(0, 'count');
 
   return (
-    <Fragment>
-      <div>
-        <ul>
-          {joke && (
-            <div>
-              {joke.type === 'single' ? (
-                <li>{joke.joke}</li>
-              ) : (
-                <div>
-                  <li>{joke.setup}</li>
-                  <li>{joke.delivery}</li>
-                </div>
-              )}
-            </div>
-          )}
-        </ul>
-        <div>
-          <button
-            onClick={() => {
-              setCount(count + 1);
-              call();
-            }}
-          >
-            Click For New Joke
-          </button>
-          <button onClick={saveJoke}>Save current Joke</button>
-        </div>
+    <div className='border-2 border-white rounded-md flex flex-col items-center justify-center text-center'>
+      <div className=' border-2 border-white w-56 rounded-xl mt-5 p-5'>
+        <p className='mb-2 text-xl text-bold'>All The Jokes Rendered</p>
+        <p className='text-xl text-bold'>{count}</p>
       </div>
-      <div>
-        <p>All The Jokes Rendered</p>
-        <p>{count}</p>
+      <ul className='border-2 border-white w-56 rounded-xl mt-5'>
+        {joke && (
+          <div>
+            {joke.type === 'single' ? (
+              <li>{joke.joke}</li>
+            ) : (
+              <div>
+                <li>{joke.setup}</li>
+                <li>{joke.delivery}</li>
+              </div>
+            )}
+          </div>
+        )}
+      </ul>
+      <div className='flex flex-col'>
+        <button
+          onClick={() => {
+            setCount(count + 1);
+            call();
+          }}
+        >
+          Click For New Joke
+        </button>
+        <button onClick={saveJoke}>Save current Joke</button>
       </div>
       <div>
         <p>Saved Jokes</p>
@@ -78,10 +76,9 @@ const Joke = ({ genre }) => {
               </div>
             );
           })}
-          <li></li>
         </div>
       </div>
-    </Fragment>
+    </div>
   );
 };
 
