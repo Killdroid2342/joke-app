@@ -36,7 +36,7 @@ const Joke = ({ genre }) => {
       </div>
       <ul className='border-2 border-white w-56 rounded-xl mt-5'>
         {joke && (
-          <div>
+          <div className='p-5'>
             {joke.type === 'single' ? (
               <li>{joke.joke}</li>
             ) : (
@@ -54,19 +54,19 @@ const Joke = ({ genre }) => {
             setCount(count + 1);
             call();
           }}
-          className='border-2 border-white p-3 mt-5 rounded-xl'
+          className='border-2 border-white p-3 mt-5 rounded-xl font-bold'
         >
           Click For New Joke
         </button>
         <button
           onClick={saveJoke}
-          className='border-2 border-white p-3 mt-5 rounded-xl'
+          className='border-2 border-white p-3 mt-5 rounded-xl font-bold'
         >
           Save current Joke
         </button>
       </div>
       <div>
-        <p className='text-2xl mt-3 font-bold'>Saved Jokes</p>
+        <p className='text-3xl mt-5 mb-5 font-bold'>Saved Jokes</p>
         <div>
           {savedJokes?.map((savedJoke, idx) => {
             return (
@@ -74,9 +74,9 @@ const Joke = ({ genre }) => {
                 {savedJoke.type === 'single' ? (
                   <li>{savedJoke.joke}</li>
                 ) : (
-                  <div>
-                    <li>{savedJoke.setup}</li>
-                    <li>{savedJoke.delivery}</li>
+                  <div className='border-2 border-white p-5 rounded-lg mb-5'>
+                    <li className='list-none'>{savedJoke.setup}</li>
+                    <li className='list-none'>{savedJoke.delivery}</li>
                   </div>
                 )}
               </div>
