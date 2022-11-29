@@ -7,7 +7,7 @@ function App() {
   return (
     <React.Fragment>
       <h1 className='text-center text-3xl font-bold text-white mt-8'>
-        Wanna Hear a joke?
+        Wanna Hear A Joke?
       </h1>
       <Selector genre={genre} setGenre={setGenre} />
       <div>
