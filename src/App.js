@@ -6,7 +6,7 @@ function App() {
   document.title = 'Joke Website';
   return (
     <React.Fragment>
-      <h1 className='text-center text-2xl font-bold text-white'>
+      <h1 className='text-center text-3xl font-bold text-white mt-8'>
         Wanna Hear a joke?
       </h1>
       <Selector genre={genre} setGenre={setGenre} />
