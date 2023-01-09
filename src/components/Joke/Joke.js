@@ -1,5 +1,8 @@
 import React, { useState } from 'react';
 import useDynamicState from '../util/useLocalStorage';
+import JokeClick from './JokeClick/JokeClick';
+import JokeSetup from './JokeSetup/JokeSetup';
+import JokeDelivery from './JokeDelivery/JokeDelivery';
 
 const Joke = ({ genre }) => {
   const [joke, setJoke] = useState(null);
