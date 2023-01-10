@@ -37,37 +37,14 @@ const Joke = ({ genre }) => {
         <p className='mb-2 text-xl font-bold'>All The Jokes Rendered</p>
         <p className='text-xl font-bold'>{count}</p>
       </div>
-      <ul className='border-2 border-white w-56 rounded-xl mt-5'>
-        {joke && (
-          <div className='p-5'>
-            {joke.type === 'single' ? (
-              <li>{joke.joke}</li>
-            ) : (
-              <div>
-                <li>{joke.setup}</li>
-                <li>{joke.delivery}</li>
-              </div>
-            )}
-          </div>
-        )}
-      </ul>
-      <div className='flex flex-col'>
-        <button
-          onClick={() => {
-            setCount(count + 1);
-            call();
-          }}
-          className='border-2 border-white p-3 mt-5 rounded-xl font-bold'
-        >
-          Click For New Joke
-        </button>
-        <button
-          onClick={saveJoke}
-          className='border-2 border-white p-3 mt-5 rounded-xl font-bold'
-        >
-          Save current Joke
-        </button>
-      </div>
+      <JokeSetup joke={joke} />
+      <JokeClick
+        setCount={setCount}
+        count={count}
+        call={call}
+        saveJoke={saveJoke}
+      />
+
       <div>
         <p className='text-3xl mt-5 mb-5 font-bold'>Saved Jokes</p>
         {savedJokes?.map((savedJoke, idx) => {
