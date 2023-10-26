@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Joke App
 
 In this project, you have the ability to choose the catagory of jokes and you can generate jokes. Not only this, you have the ability to save jokes if you like it. The storage uses the local storage the project uses an API.
@@ -46,3 +47,6 @@ https://joke-app-woad.vercel.app/
 ## Built With
 
 - React (JavaScript)
+=======
+In this project, you have the ability to choose the catagory of jokes and you can generate jokes. Not only this, you have the ability to save jokes if you like it. The storage uses the local storage the project uses an API.
+>>>>>>> 1a153ff231e803d0ca0795ab005325e9b6f98ffc
